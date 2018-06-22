@@ -1,0 +1,13 @@
+language: php
+
+php:
+  - 7.2
+  - 7.1
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+before_script:
+  - composer self-update
+  - composer update --prefer-dist

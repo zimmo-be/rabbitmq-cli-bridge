@@ -1,0 +1,30 @@
+{
+    "name": "zimmo/rabbitmq-cli-bridge",
+    "type": "library",
+    "description": "Process messages with RabbitMQ cli consumer",
+    "keywords": [
+        "RabbitMQ",
+        "Symfony"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.1",
+        "php-amqplib/rabbitmq-bundle": "~1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zimmo\\RabbitMQCliBridge\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zimmo\\RabbitMQCliBridge\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.2"
+    }
+}

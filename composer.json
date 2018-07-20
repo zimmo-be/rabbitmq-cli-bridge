@@ -25,6 +25,7 @@
         "sort-packages": true
     },
     "require-dev": {
+        "php-coveralls/php-coveralls": "^2.1",
         "phpunit/phpunit": "^7.2"
     }
 }

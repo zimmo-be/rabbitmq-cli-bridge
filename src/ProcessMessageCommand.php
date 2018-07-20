@@ -27,7 +27,14 @@ class ProcessMessageCommand extends Command
 
     protected function configure()
     {
-        $this->addArgument('message', InputArgument::REQUIRED);
+        $this->addArgument('message', InputArgument::REQUIRED, 'RabbitMQ message');
+        $this->setDescription('Process rabbitmq-cli-consumer messages');
+        $this->setHelp(
+            <<<EOT
+Process messages sent by rabbitmq-cli-consumer, eg.
+    <info>rabbitmq-cli-consumer --verbose --url amqp://guest:guest@localhost --queue myqueue --executable 'bin/console event:process' --include</info>
+EOT
+        );
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
